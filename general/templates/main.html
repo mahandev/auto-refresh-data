@@ -16,13 +16,15 @@
     (function(){
     
       function get_value(){
-        // create an ajax request
+        // create a request to your /data route.
         var q = new XMLHttpRequest();
       
+        // get the data that has been returned
         q.open("get", "/data", true);
         q.send();
         console.log(q.responseText)
-      
+        
+        // call the function as soon as the HTML page loads.
         q.onload = function () {
           // update page with new value
           document.getElementById('hi').innerHTML = + q.responseText;
