@@ -17,7 +17,7 @@ def get_data():
 @app.route("/", methods=["GET","POST"])
 def stuff():
     
-    return render_template("home.html")
+    return render_template("main.html")
 
 
 app.run(debug=True)
